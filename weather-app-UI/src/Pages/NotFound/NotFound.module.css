@@ -1,0 +1,34 @@
+.notFound {
+  text-align: center;
+  padding: 2rem;
+  color: #333;
+  background-color: #e6dace;
+}
+
+.notFound h1 {
+  font-size: 3rem;
+  color: #373f46;
+}
+
+.notFound p {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.homeLink {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.5rem 1rem;
+  background-color: #ffffff;
+  color: #373f46;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.homeLink:hover {
+  background-color: #373f46;
+  color: #ffffff;
+  transform: scale(1.1);
+}
