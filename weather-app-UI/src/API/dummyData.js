@@ -1,10 +1,10 @@
-export const weatherDetails = {
+export const dummyWeatherDetails = {
   cityName: "Tel Aviv",
   countryName: "israel",
-  date: "13/2/22",
-  hour: "16:00",
-  temp: "18",
-  description: "sunny",
+  date: "01/12/24",
+  hour: "15:00",
+  temp: "16",
+  description: "Sunny",
   phd: [
     {
       id: 1,
@@ -59,6 +59,6 @@ export const weatherDetails = {
   ],
   latitude: 32.07,
   longitude: 34.76,
-  accurateDate: "13/02/2022",
-  accurateHour: "16:24",
+  accurateDate: "01/12/2024",
+  accurateHour: "14:45",
 };

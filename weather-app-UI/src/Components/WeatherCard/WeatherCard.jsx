@@ -1,18 +1,21 @@
 import styles from "./WeatherCard.module.css";
 export default function WeatherCard({ weatherDetails }) {
+  console.log("WeatherCard props:", weatherDetails);
   return (
     <div className={styles.card}>
       <div className={styles.cityCountryDate}>
         <p className={styles.cityName}>{weatherDetails.cityName}</p>
         <p className={styles.countryName}>{weatherDetails.countryName}</p>
-        <div className={styles.dataAndHour}>
+        <div className={styles.dateAndHour}>
           <p className={styles.date}>{weatherDetails.date} at</p>
           <p className={styles.hour}>{weatherDetails.hour}</p>
         </div>
       </div>
       <div className={styles.tempAndDesc}>
         <p className={styles.temp}>{weatherDetails.temp}°</p>
-        <p className={styles.description}>{weatherDetails.description}</p>
+        <p className={styles.description}>
+          {weatherDetails.description.toLowerCase()}
+        </p>
       </div>
       <div className={styles.phw}>
         {weatherDetails.phd.map((item) => {

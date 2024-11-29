@@ -1,13 +1,33 @@
 .notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #27737d;
+  padding: 2rem;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  width: 10rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   padding: 2rem;
-  color: #333;
-  background-color: #e6dace;
+  border-radius: 1rem;
 }
 
 .notFound h1 {
   font-size: 3rem;
-  color: #373f46;
+  color: #d0dfe2;
 }
 
 .notFound p {
@@ -20,7 +40,7 @@
   margin-top: 2rem;
   padding: 0.5rem 1rem;
   background-color: #ffffff;
-  color: #373f46;
+  color: #27737d;
   text-decoration: none;
   border-radius: 5px;
   font-size: 1rem;
@@ -28,7 +48,11 @@
 }
 
 .homeLink:hover {
-  background-color: #373f46;
+  background-color: #a8c6cb;
   color: #ffffff;
   transform: scale(1.1);
+}
+.notFound img {
+  width: 10rem;
+  height: auto;
 }

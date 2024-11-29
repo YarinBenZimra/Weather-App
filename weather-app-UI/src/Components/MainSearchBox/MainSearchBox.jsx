@@ -12,7 +12,7 @@ export default function MainSearchBox({ onSearch }) {
     let error = "";
     if (!city.trim() || city.trim().length === 0) {
       error = "City must contains at least one character";
-    } else if (!/[a-zA-Z| ]+/.test(city.trim())) {
+    } else if (!/[a-zA-Z| ]+$/.test(city.trim())) {
       error = "City must contains only letters and spaces (e.g. 'New York')";
     }
     return error;

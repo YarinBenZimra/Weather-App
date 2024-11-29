@@ -2,14 +2,26 @@ import React, { useState } from "react";
 import styles from "./HomePage.module.css";
 import MainSearchBox from "../../Components/MainSearchBox/MainSearchBox";
 import WeatherCard from "../../Components/WeatherCard/WeatherCard";
-import { weatherDetails } from "../../API/dummyData.js";
+import NotFoundCard from "../../Components/NotFoundCard/NotFoundCard";
+import { dummyWeatherDetails } from "../../API/dummyData.js";
+import { fetchWeatherData } from "../../API/ApiService.js";
 function HomePage() {
-  const [isValidData, setIsValidData] = useState(true);
-  const handleSearch = (city) => {
-    console.log("Searching for weather in:", city);
-    // Later, we will fetch weather data from the backend here
+  const [status, setStatus] = useState();
+  const [weatherDetails, setWeatherDetails] = useState(null);
+  const handleSearch = async (city) => {
+    const result = await fetchWeatherData(city);
+    if (result.success) {
+      setWeatherDetails(result.data);
+      setStatus(200);
+    } else if (result.status !== 500) {
+      setWeatherDetails(null);
+      setStatus(result.status);
+    }
+    if (result.status === 500) {
+      setWeatherDetails(null);
+      setStatus(500);
+    }
   };
-  console.log(weatherDetails);
   return (
     <div className={styles.container}>
       <div className={styles.left}>
@@ -30,7 +42,7 @@ function HomePage() {
             <MainSearchBox onSearch={handleSearch} />
           </div>
         </div>
-        {isValidData && (
+        {status && status === 200 && (
           <div className={styles.weatherDetailsLeft}>
             <div className={styles.latAndlg}>
               <p className={styles.detailsTxt}>
@@ -49,7 +61,13 @@ function HomePage() {
       </div>
       <div className={styles.right}>
         <div className={styles.cardContainer}>
-          <WeatherCard weatherDetails={weatherDetails} />
+          {status && status === 200 && (
+            <WeatherCard weatherDetails={weatherDetails} />
+          )}
+          {status && status !== 500 && status !== 200 && <NotFoundCard />}
+          {status && status === 500 && (
+            <WeatherCard weatherDetails={dummyWeatherDetails} />
+          )}
         </div>
       </div>
     </div>
