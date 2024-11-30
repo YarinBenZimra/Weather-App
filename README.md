@@ -145,7 +145,6 @@ If the app doesn't start, make sure:
     # Setup and run the server
     cd server
     npm install
-    touch .env
     echo WEATHER_API_KEY=4697756525714ec3bbb123718242711 > .env
     node server.js
 
