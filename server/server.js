@@ -3,7 +3,6 @@ import express from "express";
 import cors from "cors";
 import weatherRoutes from "./routes/weather.js";
 import logger from "./loggers.js";
-console.log("Current Working Directory:", process.cwd());
 
 const app = express();
 const PORT = 5000;

@@ -137,6 +137,7 @@
     display: flex;
     width: 60%;
     height: auto;
+    margin-top: 1.5rem;
   }
   .weatherDetailsLeft {
     display: flex;
