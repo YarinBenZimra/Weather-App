@@ -64,13 +64,7 @@ weather-app-UI (frontend)
  npm install
 ```
 
-#### Create a .env file in the server folder:
-
-```bash
-  touch .env
-```
-
-#### Add the following line to the .env file (WEATHER_API_KEY=4697756525714ec3bbb123718242711):
+#### Create a .env and Add the following line to the .env file: WEATHER_API_KEY=4697756525714ec3bbb123718242711:
 
 ```bash
   echo WEATHER_API_KEY=4697756525714ec3bbb123718242711 > .env
