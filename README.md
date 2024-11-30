@@ -10,7 +10,7 @@ Welcome to the **Weather App**! This project is a full-stack application consist
 - [Installation and Setup](#installation-and-setup)
   - [Step 1: Clone the Repository](#step-1-setup-the-project)
   - [Step 2: Setup the Server](#step-2-setup-the-server)
-  - [Step 3: Install Dependencies](#step-3-setup-the-weather-app-UI)
+  - [Step 3: Setup the weather-app-UI](#step-3-setup-the-weather-app-UI)
   - [Step 4: Run the Server and the UI](#step-4-run-the-server-and-the-ui)
 - [Logs](#logs)
 - [Notes](#notes)
