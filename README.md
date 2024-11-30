@@ -10,7 +10,7 @@ Welcome to the **Weather App**! This project is a full-stack application consist
 - [Installation and Setup](#installation-and-setup)
   - [Step 1: Clone the Repository](#step-1-setup-the-project)
   - [Step 2: Setup the Server](#step-2-setup-the-server)
-  - [Step 3: Install Dependencies](#step-3-install-dependencies)
+  - [Step 3: Install Dependencies](#step-3-setup-the-weather-app-UI)
   - [Step 4: Run the Server and the UI](#step-4-run-the-server-and-the-ui)
 - [Logs](#logs)
 - [Notes](#notes)
@@ -58,6 +58,12 @@ weather-app-UI (frontend)
   cd server
 ```
 
+##### Install the dependencies:
+
+```bash
+ npm install
+```
+
 #### Create a .env file in the server folder:
 
 ```bash
@@ -67,24 +73,10 @@ weather-app-UI (frontend)
 #### Add the following line to the .env file (WEATHER_API_KEY=4697756525714ec3bbb123718242711):
 
 ```bash
-  echo "WEATHER_API_KEY=4697756525714ec3bbb123718242711" > .env
+  echo WEATHER_API_KEY=4697756525714ec3bbb123718242711 > .env
 ```
 
-### Step 3: Install Dependencies
-
-You need to install dependencies for both the server and the frontend:
-
-#### Navigate to the server folder (if not already there):
-
-```bash
-  cd server
-```
-
-##### Install the dependencies:
-
-```bash
- npm install
-```
+### Step 3: Setup the weather-app-UI
 
 #### Navigate to the weather-app-UI folder:
 
@@ -158,9 +150,9 @@ If the app doesn't start, make sure:
 
     # Setup and run the server
     cd server
-    touch .env
-    echo "WEATHER_API_KEY=4697756525714ec3bbb123718242711" > .env
     npm install
+    touch .env
+    echo WEATHER_API_KEY=4697756525714ec3bbb123718242711 > .env
     node server.js
 
     # Open a ***new*** terminal- Nevigate to the project folder and setup/run the frontend
