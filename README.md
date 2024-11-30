@@ -54,8 +54,6 @@ weather-app-UI (frontend)
 
 #### Navigate to the server folder:
 
-bash
-
 ```bash
   cd server
 ```
