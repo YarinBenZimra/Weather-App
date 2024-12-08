@@ -27,11 +27,7 @@ function HomePage() {
       <div className={styles.left}>
         <div className={styles.logoContainer}>
           <a href="/">
-            <img
-              className={styles.logo}
-              src="/logos/logo.svg"
-              alt="fintek digital"
-            />
+            <img className={styles.logo} src="/logos/logo.png" alt="logo" />
           </a>
         </div>
         <div className={styles.headlineAndSearch}>

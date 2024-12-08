@@ -4,11 +4,7 @@ import notFound from "../../../src/assets/notFound/notFound.png";
 export default function NotFound() {
   return (
     <div className={styles.notFound}>
-      <img
-        className={styles.logo}
-        src="/logos/whiteFintekLogo.png"
-        alt="fintek logo"
-      />
+      <img className={styles.logo} src="/logos/logo.png" alt="logo" />
       <div className={styles.container}>
         <h1>404 - Page Not Found</h1>
         <img src={notFound} alt="Not-Found"></img>

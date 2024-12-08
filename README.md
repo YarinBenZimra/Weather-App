@@ -1,3 +1,7 @@
+Here's the updated README with instructions for obtaining an API key from WeatherAPI.com instead of using your API key:
+
+---
+
 # Weather App
 
 Welcome to the **Weather App**! This project is a full-stack application consisting of a server and a React-based frontend UI. Follow the instructions below to install and run the project.
@@ -47,8 +51,9 @@ To get started, clone the project from GitHub using the following command:
 ```
 
 Inside the Weather-App folder, you'll find two subfolders:
-server (backend)
-weather-app-UI (frontend)
+
+- `server` (backend)
+- `weather-app-UI` (frontend)
 
 ### Step 2: Setup the Server
 
@@ -64,11 +69,17 @@ weather-app-UI (frontend)
  npm install
 ```
 
-#### Create a .env and Add the following line to the .env file: WEATHER_API_KEY=4697756525714ec3bbb123718242711:
+#### Create a .env file and Add Your WeatherAPI Key:
+
+1. Sign up at [WeatherAPI.com](https://www.weatherapi.com/) and create a free account.
+2. Obtain your API key from the dashboard.
+3. Create a `.env` file in the `server` directory and add the following line:
 
 ```bash
-  echo WEATHER_API_KEY=4697756525714ec3bbb123718242711 > .env
+  WEATHER_API_KEY=your_api_key_here
 ```
+
+Replace `your_api_key_here` with the API key you obtained from WeatherAPI.com.
 
 ### Step 3: Setup the weather-app-UI
 
@@ -90,7 +101,7 @@ Now you're ready to start the server and the frontend UI.
 
 #### Open a terminal window and navigate to the project folder.
 
-##### Navigate to the server folder and start the server
+##### Navigate to the server folder and start the server:
 
 ```bash
   cd server
@@ -101,7 +112,7 @@ The server will run at: http://localhost:5000
 
 #### Open a **new** terminal window (keep the server running in the previous one), and navigate to the project folder.
 
-##### Navigate to the weather-app-UI folder and start the react-app:
+##### Navigate to the weather-app-UI folder and start the React app:
 
 ```bash
   cd weather-app-UI
@@ -110,9 +121,13 @@ The server will run at: http://localhost:5000
 
 The frontend will run at: http://localhost:3000
 
+---
+
 ## Logs
 
-All server logs, including requests and errors, will be saved in the server/logs directory. Check this directory if you want to debug or monitor server activity.
+All server logs, including requests and errors, will be saved in the `server/logs` directory. Check this directory if you want to debug or monitor server activity.
+
+---
 
 ## Notes
 
@@ -125,15 +140,19 @@ Since the server and the UI are separate applications, you need two terminal win
 
 ### Environmental Variables:
 
-Ensure the .env file is correctly set up in the server folder. Without the WEATHER_API_KEY, the app will not function.
+Ensure the `.env` file is correctly set up in the `server` folder with a valid `WEATHER_API_KEY`. Without the key, the app will not function.
+
+---
 
 ## Troubleshooting:
 
 If the app doesn't start, make sure:
 
 - Node.js and npm are installed.
-- Check the server/logs folder for any error logs.
-- Verify the .env file in the server folder has the correct API key.
+- Check the `server/logs` folder for any error logs.
+- Verify the `.env` file in the server folder has the correct API key.
+
+---
 
 ## Summary Of The Commands To Run The App:
 
@@ -145,11 +164,15 @@ If the app doesn't start, make sure:
     # Setup and run the server
     cd server
     npm install
-    echo WEATHER_API_KEY=4697756525714ec3bbb123718242711 > .env
+    echo WEATHER_API_KEY=your_api_key_here > .env
     node server.js
 
-    # Open a ***new*** terminal- Nevigate to the project folder and setup/run the frontend
+    # Open a ***new*** terminal - Navigate to the project folder and setup/run the frontend
     cd weather-app-UI
     npm install
     npm start
 ```
+
+---
+
+Feel free to explore, use, and extend the project. Contributions are welcome! 🌦️
