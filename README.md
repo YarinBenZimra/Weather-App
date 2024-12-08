@@ -1,7 +1,3 @@
-Here's the updated README with instructions for obtaining an API key from WeatherAPI.com instead of using your API key:
-
----
-
 # Weather App
 
 Welcome to the **Weather App**! This project is a full-stack application consisting of a server and a React-based frontend UI. Follow the instructions below to install and run the project.
